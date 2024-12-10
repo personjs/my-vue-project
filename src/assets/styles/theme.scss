@@ -1,0 +1,29 @@
+/* Light theme styles */
+body.light {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+body.light h1 {
+    color: #000000;
+}
+
+body.light button {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Dark theme styles */
+body.dark {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+body.dark h1 {
+    color: #ffffff;
+}
+
+body.dark button {
+    background-color: #444444;
+    color: white;
+}

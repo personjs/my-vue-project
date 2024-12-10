@@ -1,0 +1,100 @@
+/* src/assets/styles/navigation.scss */
+
+/* Base styles for the navigation */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 50px;
+    /* Initial narrow width */
+    background-color: #333;
+    transition: width 0.3s ease;
+    /* Smooth transition for expanding */
+    overflow: hidden;
+    /* Hide content that goes beyond the narrow width */
+    z-index: 100;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* The unordered list (navigation links container) */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Style for each list item */
+nav li {
+    margin: 20px 0;
+}
+
+/* Style for the links and icons */
+nav a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    padding: 0 10px;
+    text-align: center;
+    font-size: 16px;
+    transition: padding 0.3s ease, font-size 0.3s ease;
+    white-space: nowrap;
+    border: none;
+    border-radius: 4px;
+    margin-left: 10px;
+
+    /* Make the icon and text appear inline */
+    i.fa {
+        font-size: 24px;
+        margin-right: 10px;
+        /* Space between icon and text */
+    }
+
+    /* Hide text initially */
+    .link-text {
+        display: none;
+        /* Hidden when collapsed */
+    }
+}
+
+/* Expand the sidenav and show text when hovered */
+nav:hover {
+    width: 200px;
+}
+
+/* Show the text when the sidenav is hovered */
+nav:hover a .link-text {
+    display: inline-block;
+    /* Show text */
+    padding-left: 10px;
+    /* Add padding to the left when text is shown */
+    font-size: 18px;
+    /* Increase font size for better visibility */
+}
+
+/* Hover effect on links */
+nav a:hover {
+    background-color: #444;
+    /* Darken background on hover */
+}
+
+nav a:hover i.fa {
+    background-color: #444;
+    /* Optional: Darken icon background on hover */
+}
+
+/* ThemeToggle at the bottom */
+nav li:last-child {
+    margin-top: auto;
+    margin-bottom: 20px;
+}
